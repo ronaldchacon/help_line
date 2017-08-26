@@ -1,4 +1,9 @@
 class CustomersController < ApplicationController
+  def ng
+    @base_url = "/customers/ng"
+    render :index
+  end
+
   def index
     if params[:keywords]
       @keywords = params[:keywords]
@@ -12,9 +17,21 @@ class CustomersController < ApplicationController
     end
 
     respond_to do |format|
-      format.html
+      format.html do
+        redirect_to customers_ng_path
+      end
       format.json do
         render json: { customers: @customers }
+      end
+    end
+  end
+
+  def show
+    customer = Customer.find(params[:id])
+
+    respond_to do |format|
+      format.json do
+        render json: { customer: customer }
       end
     end
   end

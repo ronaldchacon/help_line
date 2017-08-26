@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "dashboard#index"
-  resources :customers, only: %i(index)
+
+  get "customers/ng", to: "customers#ng"
+  get "customers/ng/*angular_route", to: "customers#ng"
+  resources :customers, only: %i(index show)
 end
