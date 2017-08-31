@@ -2,8 +2,8 @@
   <form>
     <div class="row">
       <div class="col-md-6">
-        <helpline-customer-info></helpline-customer-info>
-        <helpline-address></helpline-address>
+        <helpline-customer-info bind-customer="customer"></helpline-customer-info>
+        <helpline-address addressType="Shipping" bind-address="customer.shipping_address"></helpline-address>
       </div>
 
       <div class="col-md-6">
@@ -14,7 +14,7 @@
           <section class="panel-body">
             <helpline-credit-card></helpline-credit-card>
             <hr>
-            <helpline-address></helpline-address>
+            <helpline-address addressType="Billing" bind-address="customer.billing_address"></helpline-address>
         </article>
       </div>
     </div>

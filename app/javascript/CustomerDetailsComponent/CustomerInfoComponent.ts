@@ -3,10 +3,15 @@ import template from "./CustomerInfoComponent.html";
 
 var CustomerInfoComponent = Component({
   selector: "helpline-customer-info",
+  inputs: [
+    "customer"
+  ],
   template: template
 }).Class({
   constructor: [
-    function() {}
+    function() {
+      this.customer = null;
+    }
   ]
 })
 
