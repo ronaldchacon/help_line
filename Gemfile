@@ -18,6 +18,7 @@ gem 'foreman'
 gem 'devise'
 gem 'faker'
 gem 'kaminari'
+gem 'angular_rails_csrf'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

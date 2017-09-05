@@ -11,6 +11,7 @@ import { CustomerDetailsComponent } from "CustomerDetailsComponent";
 import { CustomerInfoComponent } from "CustomerDetailsComponent/CustomerInfoComponent";
 import { AddressComponent } from "CustomerDetailsComponent/AddressComponent";
 import { CreditCardComponent } from "CustomerDetailsComponent/CreditCardComponent";
+import { TextFieldComponent } from "TextFieldComponent";
 
 var AppComponent = Component({
   selector: "helpline-customers-app",
@@ -42,6 +43,7 @@ var CustomerAppModule = NgModule ({
     CustomerInfoComponent,
     AddressComponent,
     CreditCardComponent,
+    TextFieldComponent,
     AppComponent
   ],
   bootstrap: [ AppComponent ]

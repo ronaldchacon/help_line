@@ -2,8 +2,11 @@
   <form>
     <div class="row">
       <div class="col-md-6">
-        <helpline-customer-info bind-customer="customer"></helpline-customer-info>
-        <helpline-address addressType="Shipping" bind-address="customer.shipping_address"></helpline-address>
+        <helpline-customer-info bind-customer="customer" on-customerInfoChanged="saveCustomer($event)">
+        </helpline-customer-info>
+
+        <helpline-address addressType="Shipping" bind-address="customer.shipping_address" on-addressChanged="saveShippingAddress($event)">
+        </helpline-address>
       </div>
 
       <div class="col-md-6">
@@ -14,9 +17,10 @@
           <section class="panel-body">
             <helpline-credit-card bind-cardholder_id="customer.cardholder_id"></helpline-credit-card>
             <hr>
-            <helpline-address addressType="Billing" bind-address="customer.billing_address"></helpline-address>
+            <helpline-address addressType="Billing" bind-address="customer.billing_address" on-addressChanged="saveBillingAddress($event)">
+            </helpline-address>
         </article>
       </div>
     </div>
   </form>
-</section>
+  </section>
